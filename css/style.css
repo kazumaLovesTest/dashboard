@@ -10,8 +10,8 @@ body{
 
 .container{
   display: grid;
-  grid-template-columns:2fr 5fr;
-  grid-template-rows: 1fr 3fr;
+  grid-template-columns:1fr 5fr;
+  grid-template-rows: 1fr 4fr;
   border: 1px solid black;
 }
 .sidebar{
@@ -19,7 +19,7 @@ body{
   border: 1px solid black;
   grid-column: 1/2;
   grid-row: -1/1;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr 4fr 2fr;
   grid-row-gap: 2rem;
 }
@@ -127,4 +127,39 @@ button{
   appearance: none;
   -webkit-appearance: none;
   background-color: #e2e8f0;
+}
+.midbar {
+  display: grid;
+  grid-column: -1/2;
+  grid-template-columns:2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.projects {
+  display: grid;
+  grid-row: 1/3;
+  grid-template-rows: 30px 1fr;
+} 
+.projects h3{
+  grid-column: -1/1;
+  align-self: center;
+  margin-left: 1rem;
+}
+.projects .cards{
+  display: grid;
+  justify-content: space-around;
+  gap: 1rem;
+  grid-template-columns: repeat(2,minmax(100px,300px));
+  grid-template-rows: repeat(auto-fit,minmax(100px,125px));
+}
+.announcements{
+  display: grid;
+  align-items: center;
+
+}
+.announcements div{
+  display: grid;
+}
+.trending{
+  display: grid;
+  grid-column: -1/2;
 }
