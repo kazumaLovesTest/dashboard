@@ -15,7 +15,6 @@ body{
   border: 1px solid black;
 }
 .sidebar{
-
   display: grid;
   border: 1px solid black;
   grid-column: 1/2;
@@ -27,7 +26,6 @@ body{
 
 .sidebar>.middle,.sidebar>.upper,.sidebar>.lower{
   display: grid;
-  /* gap: 1rem; */
 }
 
 .sidebar p{
@@ -46,6 +44,87 @@ a{
   gap: .5rem;
 
 }
-a > p, a > h1{
+a p,a h1{
   justify-self: start;
 } 
+
+.upperBar{
+  display: grid;
+  grid-column: -1/2;
+  border:1px solid black;
+  grid-row: 1/2;
+  grid-template-rows: 1fr 2fr; 
+}
+.upperBar .upper{
+  align-items:center ;
+  display: grid;
+  grid-column: -1/1;
+  gap: 3rem;
+  grid-template-columns: 2fr 1fr;
+}
+
+.upperBar > .upper div:nth-child(2){
+  display: grid;
+  grid-column: -1/2;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+.upperBar > .upper div:nth-child(2) a{
+  justify-self: end;
+}
+.upperBar > .upper div:nth-child(2) img{
+  justify-self: center;
+  
+}
+.upperBar > .upper div:nth-child(1){
+  display: grid;
+  grid-column: 1/2;
+  grid-template-columns: 1fr 8fr;
+  gap: 1rem;
+}
+.upperBar > .upper div:nth-child(1) label{
+  justify-self: end;
+}
+input[type="search"] {
+  border: 1px solid black;
+  border-radius: .5rem;
+  font-size: 1rem;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #e2e8f0;
+}
+
+.upperBar .lower{
+  display: grid;
+  grid-column: -1/1;
+  grid-template-columns: minmax(150px,300px) minmax(300px,500px);
+  justify-content: space-between;
+  align-items: center;
+}
+.upperBar .lower div:nth-child(1){
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1rem;
+  justify-self: start;
+}
+.upperBar .lower div:nth-child(1) img{
+  justify-self: end;
+}
+.upperBar .lower> div:nth-child(2){
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: end;
+  gap: 1rem;
+}
+button{
+  border: 1px solid black;
+  height: 30px;
+  width: 120px;
+  border-radius: .5rem;
+  font-size: 1rem;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #e2e8f0;
+}
